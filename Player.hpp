@@ -11,9 +11,12 @@ namespace coup {
     private:
 
     public:
+        void foreign_aid();
+      
         void income();
-        virtual void foreign_aid();
+
         void coup(Player player);
+        virtual std::string role();
         Player();
         ~Player();
 

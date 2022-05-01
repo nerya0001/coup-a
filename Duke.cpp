@@ -11,6 +11,6 @@ namespace coup {
 
     void Duke::block(Player player) {}
 
-    std::string Duke::coins() { return ""; }
+    std::string Duke::coins() { return " "; }
 
 }

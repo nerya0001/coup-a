@@ -11,13 +11,10 @@ OBJECTS=$(subst .cpp,.o,$(SOURCES))
 
 
 run: demo
-	./demo2 ./demo1
+	./demo
 
-demo2: Demo.o $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $^ -o demo2
-
-demo1: Demo.o $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $^ -o demo1
+demo: Demo.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o demo
 
 
 test: TestCounter.o Test.o $(OBJECTS)
@@ -34,4 +31,4 @@ valgrind: demo test
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
 clean:
-	rm -f *.o demo demo1 demo2 test
+	rm -f *.o demo test

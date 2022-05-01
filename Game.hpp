@@ -9,7 +9,7 @@
 namespace coup {
     class Game {
     private:
-        std::vector<std::string> PlayersInGame;
+        // std::vector<std::string> PlayersInGame;
 
         bool isGameActive();
 
